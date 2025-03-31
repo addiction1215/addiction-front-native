@@ -1,0 +1,15 @@
+current directory: /Users/skhan/Desktop/addiction/addictionFront/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+/Users/skhan/.rvm/rubies/ruby-3.1.0/bin/ruby -I /Users/skhan/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20250331-38696-g9zkud.rb extconf.rb
+creating Makefile
+
+current directory: /Users/skhan/Desktop/addiction/addictionFront/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/skhan/Desktop/addiction/addictionFront/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/skhan/Desktop/addiction/addictionFront/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 nkf.bundle ./.gem.20250331-38696-rsq5m8
