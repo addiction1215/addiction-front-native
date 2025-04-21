@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.addictionfront.app-mergeDebugResources-26:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\wjdvl\\.gradle\\caches\\8.12\\transforms\\87c813b6a61053e5d9db2baa3525c21d\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+C:/addiction/addiction-front-native-main/android/app/.cxx/Debug/592s5p2v/arm64-v8a/CMakeFiles/appmodules.dir
+C:/addiction/addiction-front-native-main/android/app/.cxx/Debug/592s5p2v/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/addiction/addiction-front-native-main/android/app/.cxx/Debug/592s5p2v/arm64-v8a/CMakeFiles/rebuild_cache.dir
