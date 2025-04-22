@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { images } from './src/assets/Images';
 
 const Main = () => {
   return (
@@ -46,15 +47,18 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
     height: '100%',
     paddingTop: 20,
   },
   logo: {
-    width: '50%',
+    width: '60%',
+    height: '10%',
     margin: 20,
   },
   character: {
     width: '50%',
+    height: '30%',
     margin: 20,
   },
   socialLoginContainer: {
@@ -73,8 +77,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconImage: {
-    width: '100%',
-    height: 'auto',
+    width: 50,
+    height: 50,
   },
   buttonContainer: {
     display: 'flex',
