@@ -35,3 +35,7 @@ babel.config.js
 .vscode/
 .idea/
 *.iml
+
+# Android build outputs
+android/app/build/
+*.apk
