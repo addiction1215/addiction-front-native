@@ -1,102 +1,99 @@
 import React from 'react';
-import { Image, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { images } from './src/assets/Images';
+import styled from 'styled-components/native'; 
+import { Dimensions } from 'react-native';
 
 const Main = () => {
+
+  const screenWidth = Dimensions.get('window').width;
+  
   return (
-    <View style={styles.loginContainer}>
+    <LoginContainer>
       {/* Logo */}
-      <Image source={images.main_logo} style={styles.logo} />
+      <Logo source={images.main_logo} logoWidth = {screenWidth}  resizeMode="contain"/>
 
       {/* Character */}
-      <Image source={images.main_character} style={styles.character} />
+      <Character source={images.main_character} characterWidth = {screenWidth} resizeMode="contain"/>
 
       {/* Social Login Buttons */}
-      <View style={styles.socialLoginContainer}>
-        <TouchableOpacity style={styles.iconButton}>
-          <Image source={images.naver_login} style={styles.iconImage} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconButton}>
-          <Image source={images.kakao_login} style={styles.iconImage} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.iconButton}>
-          <Image source={images.google_login} style={styles.iconImage} />
-        </TouchableOpacity>
-      </View>
+      <SocialLoginContainer>
+        <IconButton>
+          <IconImage source={images.naver_login} />
+        </IconButton>
+        <IconButton>
+          <IconImage source={images.kakao_login} />
+        </IconButton>
+        <IconButton>
+          <IconImage source={images.google_login} />
+        </IconButton>
+      </SocialLoginContainer>
 
       {/* Email Signup/Login Links */}
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity>
-          <Text style={styles.textButton}>이메일 회원가입</Text>
-        </TouchableOpacity>
-        <Text style={styles.separator}> | </Text>
-        <TouchableOpacity>
-          <Text style={styles.textButton}>이메일 로그인</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+      <ButtonContainer>
+        <TextButton>
+          <TextButtonLabel>이메일 회원가입</TextButtonLabel>
+        </TextButton>
+        <TextButtonLabel> | </TextButtonLabel>
+        <TextButton>
+          <TextButtonLabel>이메일 로그인</TextButtonLabel>
+        </TextButton>
+      </ButtonContainer>
+    </LoginContainer>
   );
 };
 
 export default Main;
 
-const styles = StyleSheet.create({
-  loginContainer: {
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-    paddingTop: 20,
-  },
-  logo: {
-    width: '60%',
-    height: '10%',
-    margin: 20,
-  },
-  character: {
-    width: '50%',
-    height: '30%',
-    margin: 20,
-  },
-  socialLoginContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  iconButton: {
-    display: 'flex',
-    borderWidth: 0,
-    backgroundColor: 'transparent',
-    cursor: 'pointer',
-    margin: 10,
-    width: 60,
-    justifyContent: 'center',
-  },
-  iconImage: {
-    width: 50,
-    height: 50,
-  },
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: 5,
-    fontSize: 14,
-    color: '#b0b0b0',
-  },
-  textButton: {
-    backgroundColor: 'white',
-    borderWidth: 0,
-    padding: 0,
-    fontSize: 14,
-    color: '#b0b0b0',
-    cursor: 'pointer',
-  },
-  separator: {
-    color: '#b0b0b0',
-    fontSize: 14,
-  },
-});
+const LoginContainer = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+`;
+
+const Logo = styled.Image<{logoWidth: number}>`
+  width: ${(props) => props.logoWidth * 0.8}px;
+  height: ${(props) => props.logoWidth * 0.8 * 0.3}px;
+  max-width: 400px;  
+  max-height: 120px; 
+`;
+
+const Character = styled.Image<{characterWidth: number}>`
+  width: ${(props) => props.characterWidth * 0.5}px;
+  height: ${(props) => props.characterWidth * 0.5}px;
+  max-width: 300px;  
+  max-height: 300px; 
+`;
+
+const SocialLoginContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+const IconButton = styled.TouchableOpacity`
+  margin: 10px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const IconImage = styled.Image`
+  width: 50px;
+  height: 50px;
+`;
+
+const ButtonContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const TextButton = styled.TouchableOpacity`
+  padding: 4px 8px;
+`;
+
+const TextButtonLabel = styled.Text`
+  font-size: 14px;
+  color: #b0b0b0;
+`;
